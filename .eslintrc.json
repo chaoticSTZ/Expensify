@@ -1,0 +1,16 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "import"
+    ],
+    "rules": {
+        "no-consol": "off",
+        "no-use-before-define": "off",
+        "react/jsx-filename-extension": 0,
+        "linebreak-style": "off",
+        "arrow-parens": "off",
+        "eol-last": "off",
+        "no-unused-vars": "off",
+        "max-len": 0
+    }
+}
