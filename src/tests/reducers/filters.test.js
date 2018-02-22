@@ -1,7 +1,7 @@
 import moment from 'moment';
 import filtersReducer from '../../reducers/filters';
 
-test('should set up default filter values', () => {
+test('should setup default filter values', () => {
 	const state = filtersReducer(undefined, { type: '@@INIT' });
 	expect(state).toEqual({
 		text: '',
@@ -29,7 +29,7 @@ test('should set sortBy to date', () => {
 });
 
 test('should set text filter', () => {
-	const text = 'this is my filter';
+	const text = 'This is my filter';
 	const action = {
 		type: 'SET_TEXT_FILTER',
 		text

@@ -17,42 +17,32 @@ export default class ExpenseForm extends React.Component {
 	}
 	onDescriptionChange = (e) => {
 		const description = e.target.value;
-		this.setState(() => ({
-			description
-		}));
+		this.setState(() => ({ description }));
 	};
 	onNoteChange = (e) => {
 		const note = e.target.value;
-		this.setState(() => ({
-			note
-		}));
+		this.setState(() => ({ note }));
 	};
 	onAmountChange = (e) => {
 		const amount = e.target.value;
-		//Regex to match numbers AND decimal with limit to 2 characters after decimal
+
 		if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
-			this.setState(() => ({
-				amount
-			}));
+			this.setState(() => ({ amount }));
 		}
 	};
-	// Single Date Picker (calendar) Functions
 	onDateChange = (createdAt) => {
 		if (createdAt) {
-			this.setState(() => ({
-				createdAt
-			}));
+			this.setState(() => ({ createdAt }));
 		}
 	};
 	onFocusChange = ({ focused }) => {
-		this.setState(() => ({
-			calendarFocused: focused
-		}));
+		this.setState(() => ({ calendarFocused: focused }));
 	};
 	onSubmit = (e) => {
 		e.preventDefault();
+
 		if (!this.state.description || !this.state.amount) {
-			this.setState(() => ({ error: 'Please provide description and amount' }));
+			this.setState(() => ({ error: 'Please provide description and amount.' }));
 		} else {
 			this.setState(() => ({ error: '' }));
 			this.props.onSubmit({

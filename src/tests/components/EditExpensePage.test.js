@@ -14,7 +14,7 @@ beforeEach(() => {
 	);
 });
 
-test('should render ExpensePage', () => {
+test('should render EditExpensePage', () => {
 	expect(wrapper).toMatchSnapshot();
 });
 
@@ -27,5 +27,7 @@ test('should handle editExpense', () => {
 test('should handle removeExpense', () => {
 	wrapper.find('button').simulate('click');
 	expect(history.push).toHaveBeenLastCalledWith('/');
-	expect(removeExpense).toHaveBeenLastCalledWith({ id: expenses[2].id });
+	expect(removeExpense).toHaveBeenLastCalledWith({
+		id: expenses[2].id
+	});
 });

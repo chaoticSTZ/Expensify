@@ -18,7 +18,7 @@ test('should remove expense by id', () => {
 	]);
 });
 
-test('should not remove expense if id not found', () => {
+test('should not remove expenses if id not found', () => {
 	const action = {
 		type: 'REMOVE_EXPENSE',
 		id: '-1'
@@ -30,7 +30,7 @@ test('should not remove expense if id not found', () => {
 test('should add an expense', () => {
 	const expense = {
 		id: '109',
-		description: 'laptop',
+		description: 'Laptop',
 		note: '',
 		createdAt: 20000,
 		amount: 29500
